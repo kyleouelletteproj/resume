@@ -1,0 +1,127 @@
+<!doctype HTML>
+<style type = "text/css">
+#images img{
+margin-bottom: 50px;
+margin-right: 50px;
+}
+.madlib {
+display:-moz-inline-stack;
+display:inline-block;
+zoom:1;
+*display:inline;
+position:relative;
+vertical-align:top;
+margin:3px;
+width:160px;
+font-family:Trebuchet,Tahoma,Arial,sans-serif;
+font-size:11px;
+font-weight:normal;
+text-decoration:none;
+text-align:center;
+opacity:0.87;
+}
+#headerbar{
+margin:0;
+}
+.mySlides {
+text-align: center;
+}
+.guess {
+text-align: center;
+}
+.slideshow {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.slidetitle {
+margin-bottom: 20px;
+text-align: center;
+font-size: 20px;
+}
+#contentwrapper {
+background-image: url("images/trivbg.png");
+background-position: center center;
+position: fixed;
+width: 100%;
+height: 100%;
+margin-bottom: 0;
+}
+#slide {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+Button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+	color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+</style>
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+<title>MadLib Mania &copy;</title>
+</head>
+<body>
+<div id = "header">
+<h2>MadLib<br><font color="blue">Mania</h2>
+</font>
+</div>
+<br>
+<div id = "menu" style="background-color:white;">
+<a href="madlibs2.html"> Create Your Own MadLib!</a>
+</div>
+<div id ="headerbar" style="background-color: black;height:20px;width:100%;margin-bottom:0;">
+</div>
+<div id = "contentwrapper" style = "margin-top:0;">
+<div id= "slide">
+Select Your MadLib!
+<div class="slideshow"<style="top:50%;">
+<center>
+  <img class="madlib" src="./images/madlib1.png" style="width:400px;height:250px;border-style:inset;border-color:gray;">
+  <img class="madlib" src="./images/madlib2.png" style="width:400px;height:250px;border-style:inset;border-color:gray;">
+  <img class="madlib" src="./images/madlib3.png" style="width:400px;height:250px;border-style:inset;border-color:gray;"> 
+  </center>
+  <center>
+  <button onclick="plusDivs(-1)">&#10094;</button>
+  <button onclick="plusDivs(1)">&#10095;</button>
+  <button onclick="madLibSelected(slideIndex)">Select MadLib</button>
+ </div>
+</center>
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("madlib");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+function madLibSelected(number) {
+document.cookie = "madlib="+number;
+window.open("madlib.html");
+}
+</script>
+</body>
+</html>

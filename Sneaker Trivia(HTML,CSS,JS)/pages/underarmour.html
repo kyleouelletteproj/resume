@@ -1,0 +1,115 @@
+<!doctype HTML>
+<style type = "text/css">
+#images img{
+margin-bottom: 50px;
+margin-right: 50px;
+}
+#headerbar{
+margin:0;
+}
+.mySlides {
+text-align: center;
+}
+.guess {
+text-align: center;
+}
+.slideshow {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.slidetitle {
+margin-bottom: 20px;
+text-align: center;
+font-size: 20px;
+}
+#contentwrapper {
+background-image: url("../images/trivbg.png");
+background-position: center center;
+height: 55rem;
+position: fixed;
+width: 100%;
+margin-bottom: 0;
+}
+Button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+	color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+</style>
+<link rel="stylesheet" href="../stylesheet.css">
+<head>
+<title>Sneaker Showcase &copy;</title>
+</head>
+<body>
+<div id = "header">
+<h2>Sneaker<br><font color="red">Showcase</h2>
+</font>
+</div>
+<br>
+<div id = "menu" style="background-color:white;>
+<a href="../index.html">Home</a> <a href="./adidas.html">Adidas</a> <a href="./nike.html">Nike</a> <a href="./jordan.html">Jordan</a> <a href="./underarmour.html">UnderArmour</a>
+</div>
+<div id ="headerbar" style="background-color: black;height:20px;width:100%;margin-bottom:0;">
+</div>
+<div id = "contentwrapper" style = "margin-top:0;">
+
+<div id= "slide">
+Underarmour Shoe Trivia
+<div class="slideshow"<style="top:50%;">
+<center>
+  <img class="mySlides" src="../images/steph1.jpg" style="width:200px;height:150px;">
+  <img class="mySlides" src="../images/steph2.jpg" style="width:200px;height:150px;">
+  <img class="mySlides" src="../images/steph3.jpg" style="width:200px;height:150px;">
+  <img class="mySlides" src="../images/steph4.jpg" style="width:200px;height:150px;">
+  </center>
+  <center>
+  <button onclick="plusDivs(-1)">&#10094;</button>
+  <button onclick="plusDivs(1)">&#10095;</button>
+  <button onclick="checkClick(1)">One</button>
+  <button onclick="checkClick(2)">Two</button>
+  <button onclick="checkClick(3)">Three</button>
+  <button onclick="checkClick(4)">Four</button></center>
+ </div>
+<div class = "guess">
+Can you guess the Curry Shoe?
+</div>
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+function checkClick(shoe) {
+if(slideIndex == shoe) {
+alert("Correct Guess!");
+}
+else {
+alert("Wrong guess.");
+}
+}
+</script>
+</body>
+</html>

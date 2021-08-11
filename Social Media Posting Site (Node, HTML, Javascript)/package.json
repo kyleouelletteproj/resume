@@ -1,0 +1,31 @@
+{
+  "name": "hoot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Kyle, Connor, Fenn",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.0.10",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "prompt": "^1.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "socket.io": "^2.4.1",
+    "styled-components": "^5.3.0",
+    "window": "^4.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
